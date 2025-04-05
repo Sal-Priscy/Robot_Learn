@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2024-12-11T13:53:12.630077" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases\Login.robot">
+<kw name="Setup chromedriver" type="SETUP">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-12-11T13:53:12.874545" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'C:\Users\fpris\PycharmProjects\Learn Project\Test Cases/chromedriver.exe'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${EXECDIR}/chromedriver.exe</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-12-11T13:53:12.874545" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-11T13:53:12.873545" elapsed="0.001000"/>
+</kw>
+<test id="s1-t1" name="LoginTest" line="7">
+<kw name="LoginScreen">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-11T13:53:12.876545" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-11T13:53:19.155088" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-11T13:53:19.155088" elapsed="0.000000"/>
+</kw>
+<msg time="2024-12-11T13:53:19.156085" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 122
+Current browser version is 131.0.6778.139 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-12-11T13:53:12.875545" elapsed="6.285623">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 122
+Current browser version is 131.0.6778.139 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Log_In}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-11T13:53:19.162163" elapsed="0.000000"/>
+</kw>
+<kw name="Take Screenshot" owner="Screenshot">
+<arg>${TEST_NAME}</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="NOT RUN" start="2024-12-11T13:53:19.162163" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-12-11T13:53:12.875545" elapsed="6.287619">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 122
+Current browser version is 131.0.6778.139 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-12-11T13:53:19.163164" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-12-11T13:53:12.875545" elapsed="6.288616">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 122
+Current browser version is 131.0.6778.139 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+</status>
+</test>
+<status status="FAIL" start="2024-12-11T13:53:12.631085" elapsed="6.534086"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

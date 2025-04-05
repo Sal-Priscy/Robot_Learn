@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2024-12-11T14:37:13.045257" rpa="false" schemaversion="5">
+<suite id="s1" name="Learn Project" source="C:\Users\fpris\PycharmProjects\Learn Project">
+<suite id="s1-s1" name="Test Cases" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases">
+<suite id="s1-s1-s1" name="Login" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases\Login.robot">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Setup chromedriver">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-12-11T14:37:13.267891" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'C:\Users\fpris\PycharmProjects\Learn Project/chromedriver.exe'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${EXECDIR}/chromedriver.exe</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot Directory">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${Screenshot_Dir}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="0.000000"/>
+</kw>
+<arg>Setup chromedriver</arg>
+<arg>Capture Screenshot Directory</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.001084"/>
+</kw>
+<test id="s1-s1-s1-t1" name="LoginTest_1" line="7">
+<kw name="LoginScreen">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:13.270007" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-11T14:37:13.270007" elapsed="6.155656"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:19.426760" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
+<arg>${Log_In}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T14:37:19.426760" elapsed="1.127780"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-12-11T14:37:20.555667" level="INFO">${Current_Date} = 2024-12-11</msg>
+<var>${Current_Date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-12-11T14:37:20.555667" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:20.688156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_1.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${Current_Date}/${TEST_NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-11T14:37:20.556708" elapsed="0.131448"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:20.554540" elapsed="0.134697"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:13.270007" elapsed="7.419230"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-11T14:37:20.690237" elapsed="2.164771"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="9.587191"/>
+</test>
+<test id="s1-s1-s1-t2" name="LoginTest_2" line="13">
+<kw name="LoginScreen">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:22.861401" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-11T14:37:22.860248" elapsed="4.114377"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:26.975745" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
+<arg>${Log_In}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T14:37:26.975745" elapsed="0.710861"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-12-11T14:37:27.690305" level="INFO">${Current_Date} = 2024-12-11</msg>
+<var>${Current_Date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-12-11T14:37:27.689248" elapsed="0.001057"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:27.889085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_2.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${Current_Date}/${TEST_NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-11T14:37:27.690305" elapsed="0.199894"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:27.687605" elapsed="0.202594"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:22.859160" elapsed="5.031039"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-11T14:37:27.891494" elapsed="2.169225"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:22.858314" elapsed="7.203460"/>
+</test>
+<test id="s1-s1-s1-t3" name="LoginTest_3" line="19">
+<kw name="LoginScreen">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:30.067630" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-11T14:37:30.066442" elapsed="5.624253"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:35.692824" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
+<arg>${Log_In}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T14:37:35.691825" elapsed="0.530483"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-12-11T14:37:36.224494" level="INFO">${Current_Date} = 2024-12-11</msg>
+<var>${Current_Date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-12-11T14:37:36.223373" elapsed="0.001121"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-11T14:37:36.360138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_3.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${Current_Date}/${TEST_NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-11T14:37:36.224494" elapsed="0.135644"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:36.223312" elapsed="0.136826"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:30.066442" elapsed="6.294817"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-11T14:37:36.362553" elapsed="2.168163"/>
+</kw>
+<status status="PASS" start="2024-12-11T14:37:30.064046" elapsed="8.467787"/>
+</test>
+<status status="PASS" start="2024-12-11T14:37:13.072362" elapsed="25.462895"/>
+</suite>
+<status status="PASS" start="2024-12-11T14:37:13.070149" elapsed="25.469746"/>
+</suite>
+<status status="PASS" start="2024-12-11T14:37:13.047367" elapsed="25.495768"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Learn Project">Learn Project</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Test Cases">Learn Project.Test Cases</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Login">Learn Project.Test Cases.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
