@@ -1,167 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2024-12-11T14:37:13.045257" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2025-05-15T12:34:32.440525" rpa="false" schemaversion="5">
 <suite id="s1" name="Learn Project" source="C:\Users\fpris\PycharmProjects\Learn Project">
 <suite id="s1-s1" name="Test Cases" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases">
 <suite id="s1-s1-s1" name="Login" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases\Login.robot">
 <kw name="Run Keywords" owner="BuiltIn" type="SETUP">
-<kw name="Setup chromedriver">
-<kw name="Set Environment Variable" owner="OperatingSystem">
-<msg time="2024-12-11T14:37:13.267891" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'C:\Users\fpris\PycharmProjects\Learn Project/chromedriver.exe'.</msg>
-<arg>webdriver.chrome.driver</arg>
-<arg>${EXECDIR}/chromedriver.exe</arg>
-<doc>Sets an environment variable to a specified value.</doc>
-<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Screenshot Directory">
+<kw name="Capture Screenshot Directory" owner="Pre_Req">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>${Screenshot_Dir}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-15T12:34:32.972804" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-15T12:34:32.972804" elapsed="0.001068"/>
 </kw>
-<arg>Setup chromedriver</arg>
 <arg>Capture Screenshot Directory</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2024-12-11T14:37:13.267891" elapsed="0.001084"/>
+<status status="PASS" start="2025-05-15T12:34:32.972804" elapsed="0.001068"/>
 </kw>
-<test id="s1-s1-s1-t1" name="LoginTest_1" line="7">
-<kw name="LoginScreen">
+<test id="s1-s1-s1-t1" name="TC001" line="9">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Read Test Data - Using Pandas" owner="Pre_Req">
+<kw name="Read Excel Data" owner="Read_Data">
+<msg time="2025-05-15T12:34:32.985656" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<var>${data}</var>
+<arg>${EXECDIR}/Test Data 1.xls</arg>
+<arg>TestData</arg>
+<arg>${TEST_NAME}</arg>
+<status status="PASS" start="2025-05-15T12:34:32.973872" elapsed="0.011784"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-05-15T12:34:32.985656" level="INFO">{'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<arg>${data}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-05-15T12:34:32.985656" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-05-15T12:34:32.985656" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<arg>${data}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-05-15T12:34:32.985656" elapsed="0.001075"/>
+</kw>
+<status status="PASS" start="2025-05-15T12:34:32.973872" elapsed="0.012859"/>
+</kw>
+<arg>Read Test Data - Using Pandas</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-05-15T12:34:32.973872" elapsed="0.012859"/>
+</kw>
+<kw name="Open the Browser" owner="Login_Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:13.270007" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2025-05-15T12:34:32.986731" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-05-15T12:34:33.877834" level="WARN">The chromedriver version (131.0.6778.24) detected in PATH at c:\bin\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-11T14:37:13.270007" elapsed="6.155656"/>
+<status status="PASS" start="2025-05-15T12:34:32.986731" elapsed="4.011899"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:19.426760" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<arg>${Log_In}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-11T14:37:19.426760" elapsed="1.127780"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-15T12:34:36.998630" elapsed="0.026632"/>
 </kw>
-<kw name="Capture Screenshot">
+<kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-12-11T14:37:20.555667" level="INFO">${Current_Date} = 2024-12-11</msg>
+<msg time="2025-05-15T12:34:37.027436" level="INFO">${Current_Date} = 2025-05-15</msg>
 <var>${Current_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-12-11T14:37:20.555667" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-15T12:34:37.026285" elapsed="0.001151"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:20.688156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_1.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-15T12:34:37.213817" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-15/TC001.png"&gt;&lt;img src="Screenshots/2025-05-15/TC001.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${Current_Date}/${TEST_NAME}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-11T14:37:20.556708" elapsed="0.131448"/>
+<status status="PASS" start="2025-05-15T12:34:37.027436" elapsed="0.186381"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:20.554540" elapsed="0.134697"/>
+<status status="PASS" start="2025-05-15T12:34:37.026285" elapsed="0.187532"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:13.270007" elapsed="7.419230"/>
+<status status="PASS" start="2025-05-15T12:34:32.986731" elapsed="4.227086"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-11T14:37:20.690237" elapsed="2.164771"/>
-</kw>
-<status status="PASS" start="2024-12-11T14:37:13.268975" elapsed="9.587191"/>
-</test>
-<test id="s1-s1-s1-t2" name="LoginTest_2" line="13">
-<kw name="LoginScreen">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:22.861401" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-11T14:37:22.860248" elapsed="4.114377"/>
-</kw>
+<kw name="Navigate to Login Link" owner="Login_Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:26.975745" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
+<msg time="2025-05-15T12:34:37.214998" level="INFO">Clicking element 'link:Signup / Login'.</msg>
 <arg>${Log_In}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-11T14:37:26.975745" elapsed="0.710861"/>
+<status status="PASS" start="2025-05-15T12:34:37.214998" elapsed="0.654368"/>
 </kw>
-<kw name="Capture Screenshot">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Login_Id}</arg>
+<arg>timeout=10</arg>
+<arg>error= Element Not Found</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-15T12:34:37.870408" elapsed="0.018047"/>
+</kw>
+<kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-12-11T14:37:27.690305" level="INFO">${Current_Date} = 2024-12-11</msg>
+<msg time="2025-05-15T12:34:37.888455" level="INFO">${Current_Date} = 2025-05-15</msg>
 <var>${Current_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-12-11T14:37:27.689248" elapsed="0.001057"/>
+<status status="PASS" start="2025-05-15T12:34:37.888455" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:27.889085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_2.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-15T12:34:38.016331" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-15/TC001.png"&gt;&lt;img src="Screenshots/2025-05-15/TC001.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${Current_Date}/${TEST_NAME}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-11T14:37:27.690305" elapsed="0.199894"/>
+<status status="PASS" start="2025-05-15T12:34:37.888455" elapsed="0.127876"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:27.687605" elapsed="0.202594"/>
+<status status="PASS" start="2025-05-15T12:34:37.888455" elapsed="0.129355"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:22.859160" elapsed="5.031039"/>
+<status status="PASS" start="2025-05-15T12:34:37.214998" elapsed="0.802812"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-11T14:37:27.891494" elapsed="2.169225"/>
+<kw name="Enter Login" owner="Login_Page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-15T12:34:38.019144" level="INFO">Typing text 'Sal' into text field 'name:email'.</msg>
+<arg>${Login_Id}</arg>
+<arg>${data}[Login_Id]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.017810" elapsed="0.085202"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:22.858314" elapsed="7.203460"/>
-</test>
-<test id="s1-s1-s1-t3" name="LoginTest_3" line="19">
-<kw name="LoginScreen">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:30.067630" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-11T14:37:30.066442" elapsed="5.624253"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:35.692824" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<arg>${Log_In}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-11T14:37:35.691825" elapsed="0.530483"/>
-</kw>
-<kw name="Capture Screenshot">
+<kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-12-11T14:37:36.224494" level="INFO">${Current_Date} = 2024-12-11</msg>
+<msg time="2025-05-15T12:34:38.105238" level="INFO">${Current_Date} = 2025-05-15</msg>
 <var>${Current_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-12-11T14:37:36.223373" elapsed="0.001121"/>
+<status status="PASS" start="2025-05-15T12:34:38.104043" elapsed="0.001195"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-12-11T14:37:36.360138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2024-12-11/LoginTest_3.png"&gt;&lt;img src="Screenshots/2024-12-11/LoginTest_3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-15T12:34:38.238105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-15/TC001.png"&gt;&lt;img src="Screenshots/2025-05-15/TC001.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${Current_Date}/${TEST_NAME}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-12-11T14:37:36.224494" elapsed="0.135644"/>
+<status status="PASS" start="2025-05-15T12:34:38.106325" elapsed="0.132847"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:36.223312" elapsed="0.136826"/>
+<status status="PASS" start="2025-05-15T12:34:38.103012" elapsed="0.136160"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:30.066442" elapsed="6.294817"/>
+<status status="PASS" start="2025-05-15T12:34:38.017810" elapsed="0.221362"/>
 </kw>
+<kw name="Enter Password" owner="Login_Page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Password}</arg>
+<arg>timeout=5</arg>
+<arg>error= Element Not Found</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.240208" elapsed="0.010088"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-15T12:34:38.251437" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-05-15T12:34:38.273831" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password}</arg>
+<arg>${data}[Password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.250296" elapsed="0.056974"/>
+</kw>
+<kw name="Capture Screenshot" owner="Pre_Req">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-05-15T12:34:38.308301" level="INFO">${Current_Date} = 2025-05-15</msg>
+<var>${Current_Date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.308301" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-15T12:34:38.411113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-15/TC001.png"&gt;&lt;img src="Screenshots/2025-05-15/TC001.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${Current_Date}/${TEST_NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.308301" elapsed="0.102812"/>
+</kw>
+<status status="PASS" start="2025-05-15T12:34:38.307270" elapsed="0.105018"/>
+</kw>
+<status status="PASS" start="2025-05-15T12:34:38.239172" elapsed="0.173116"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Close the Browser" owner="Login_Page">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-11T14:37:36.362553" elapsed="2.168163"/>
+<status status="PASS" start="2025-05-15T12:34:38.413411" elapsed="2.162024"/>
 </kw>
-<status status="PASS" start="2024-12-11T14:37:30.064046" elapsed="8.467787"/>
+<status status="PASS" start="2025-05-15T12:34:38.412288" elapsed="2.163147"/>
+</kw>
+<arg>Close the Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-05-15T12:34:38.412288" elapsed="2.163147"/>
+</kw>
+<doc>Successful Login</doc>
+<status status="PASS" start="2025-05-15T12:34:32.973872" elapsed="7.602906"/>
 </test>
-<status status="PASS" start="2024-12-11T14:37:13.072362" elapsed="25.462895"/>
+<status status="PASS" start="2025-05-15T12:34:32.472499" elapsed="8.107793"/>
 </suite>
-<status status="PASS" start="2024-12-11T14:37:13.070149" elapsed="25.469746"/>
+<status status="PASS" start="2025-05-15T12:34:32.470395" elapsed="8.113694"/>
 </suite>
-<status status="PASS" start="2024-12-11T14:37:13.047367" elapsed="25.495768"/>
+<status status="PASS" start="2025-05-15T12:34:32.441889" elapsed="8.144504"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Learn Project">Learn Project</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Test Cases">Learn Project.Test Cases</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="Login">Learn Project.Test Cases.Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Learn Project">Learn Project</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">Learn Project.Test Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Login">Learn Project.Test Cases.Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-05-15T12:34:33.877834" level="WARN">The chromedriver version (131.0.6778.24) detected in PATH at c:\bin\chromedriver.exe might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
