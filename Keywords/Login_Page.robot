@@ -2,17 +2,29 @@
 Resource        ../Properties/Libraries.robot
 
 *** Keywords ***
-Setup chromedriver
-  Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/chromedriver.exe
+Open the Browser
+        Open Browser      ${url}  ${browser}
+        Maximize Browser Window
+        Capture Screenshot
 
-Capture Screenshot Directory
-   Set Screenshot Directory    ${Screenshot_Dir}
+Close the Browser
+        close browser
 
-Capture Screenshot
-   ${Current_Date}    Get Current Date    result_format=%Y-%m-%d
-   Capture Page Screenshot     ${Current_Date}/${TEST_NAME}.png
-
-LoginScreen
-        open browser      ${url}  ${browser}
+Navigate to Login Link
         Click Element     ${Log_In}
+        Wait Until Page Contains Element    ${Login_Id}    timeout=10    error= Element Not Found
+        Capture Screenshot
+
+Enter Login
+        Input Text    ${Login_Id}    ${data}[Login_Id]
+        Capture Screenshot
+
+Enter Password
+        Wait Until Page Contains Element    ${Password}    timeout=5    error= Element Not Found
+        Input Password    ${Password}    ${data}[Password]
+        Capture Screenshot
+
+Click LOG IN Button
+        Wait Until Page Contains Element    ${button_Login}    timeout=5    error= Element Not Found
+        Click Button    ${button_Login}
         Capture Screenshot

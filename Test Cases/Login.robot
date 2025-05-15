@@ -1,13 +1,20 @@
 *** Settings ***
 Resource        ../Properties/Libraries.robot
-Suite Setup     Run Keywords    Setup chromedriver    Capture Screenshot Directory
+Suite Setup     Run Keywords    Capture Screenshot Directory
+Test Setup      Run Keywords    Read Test Data - Using Pandas
+Test Teardown   Run Keywords    Close the Browser
 
 
 *** Test Cases ***
-LoginTest_1
-        #create webdriver      Firefox     executable_path="C:\Dev\Driverserver\geckodriver.exe"
-        #Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/chromedriver.exe
-        LoginScreen
-        close browser
+TC001
+    [Documentation]    Successful Login
+        Open the Browser
+        Navigate to Login Link
+        Enter Login
+        Enter Password
+        #Click LOG IN Button
+
+
+
 
 

@@ -1,5 +1,9 @@
 *** Variables ***
 ${Screenshot_Dir}    ${EXECDIR}/Screenshots
-${url}       https://demo.nopcommerce.com/
+${url}       https://automationexercise.com/
 ${browser}   Chrome
-${Log_In}    xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a
+${Log_In}    link:Signup / Login
+${Login_Id}    name:email
+${Password}    name:password
+${button_Login}    name:Login
+
