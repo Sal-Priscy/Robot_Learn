@@ -13,4 +13,5 @@ Capture Screenshot
    Capture Page Screenshot     ${Current_Date}/${TEST_NAME}.png
 
 Read Test Data - Using Pandas
-
+    ${data}    read_excel_data        ${EXECDIR}/Test Data 1.xls    TestData    ${TEST_NAME}
+    Log Many    ${data}
