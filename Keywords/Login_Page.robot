@@ -25,6 +25,6 @@ Enter Password
         Capture Screenshot
 
 Click LOG IN Button
-        Wait Until Page Contains Element    ${button_Login}    timeout=5    error= Element Not Found
-        Click Button    ${button_Login}
+        #Wait Until Page Contains Element    ${button_Login}    timeout=5    error= Element Not Found
+        Click Element    ${button_Login}
         Capture Screenshot
