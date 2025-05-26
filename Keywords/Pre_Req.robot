@@ -7,11 +7,11 @@ Setup chromedriver
   Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}/chromedriver.exe
 
 Capture Screenshot Directory
-   Set Screenshot Directory    ${Screenshot_Dir}
+   ${Current_Date}    Get Current Date    result_format=%Y-%m-%d
+   Screenshot.Set Screenshot Directory    ${Screenshot_Dir}/${Current_Date}
 
 Capture Screenshot
-   ${Current_Date}    Get Current Date    result_format=%Y-%m-%d
-   Capture Page Screenshot     ${Current_Date}/${TEST_NAME}.png
+   Screenshot.Take Screenshot     ${TEST_NAME}_Screenshot.png
 
 Read Test Data - Using Pandas
     ${data}    Read Excel Data    ${EXECDIR}/Test Data 1.xls    TestData    ${TEST_NAME}
