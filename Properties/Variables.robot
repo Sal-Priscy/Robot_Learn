@@ -5,5 +5,5 @@ ${browser}   Chrome
 ${Log_In}    link:Signup / Login
 ${Login_Id}    name:email
 ${Password}    name:password
-${button_Login}    name:Login
+${button_Login}    xpath://button[text()='Login']
 

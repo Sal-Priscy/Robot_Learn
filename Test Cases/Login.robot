@@ -12,7 +12,7 @@ TC001
         Navigate to Login Link
         Enter Login
         Enter Password
-        #Click LOG IN Button
+        Click LOG IN Button
 
 
 
