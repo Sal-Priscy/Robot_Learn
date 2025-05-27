@@ -14,6 +14,14 @@ TC001
         Enter Password
         Click LOG IN Button
 
+TC002
+    [Documentation]    Bad Id
+        Open the Browser
+        Navigate to Login Link
+        Enter Login
+        Enter Password
+        Click LOG IN Button
+
 
 
 

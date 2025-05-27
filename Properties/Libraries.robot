@@ -6,7 +6,7 @@ Library         DateTime
 Library         Collections
 Library         Read_Data.py
 Library         Screenshot
-#Library         AWSLibrary
+Library         OperatingSystem
 #Library         RPA.Cloud.AWS
 #Resource        ../Test Cases/Pre_Req.robot
 Resource        ../Properties/Variables.robot

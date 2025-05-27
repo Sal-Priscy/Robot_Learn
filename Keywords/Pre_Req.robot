@@ -8,10 +8,11 @@ Setup chromedriver
 
 Capture Screenshot Directory
    ${Current_Date}    Get Current Date    result_format=%Y-%m-%d
-   Screenshot.Set Screenshot Directory    ${Screenshot_Dir}/${Current_Date}
+   OperatingSystem.Create Directory    ${Screenshot_Dir}/${Current_Date}
+   Set Screenshot Directory    ${Screenshot_Dir}/${Current_Date}
 
 Capture Screenshot
-   Screenshot.Take Screenshot     ${TEST_NAME}_Screenshot.png
+   Capture Page Screenshot         ${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png
 
 Read Test Data - Using Pandas
     ${data}    Read Excel Data    ${EXECDIR}/Test Data 1.xls    TestData    ${TEST_NAME}
