@@ -27,7 +27,7 @@ Compile Screenshots
         Send Snaps To Word     ${Screenshot_Dir}/${Current_Date}/Temp/${x}
     END
     Save Doc    ${Screenshot_Dir}/${Current_Date}/Snaps/${TEST_NAME}_${TEST DOCUMENTATION}.docx
-    Empty Directory    ${Screenshot_Dir}/${Current_Date}/Temp
+    OperatingSystem.Empty Directory    ${Screenshot_Dir}/${Current_Date}/Temp
 
 #Screenshots to Word
 #    ${Current_Date}    Get Current Date    result_format=%Y-%m-%d

@@ -7,7 +7,9 @@ class Read_Data:
 
     def read_excel_data(self, path, sheet, tc):
         df = pd.read_excel(path, sheet_name=sheet)
+        print(df)
         df1 = df.to_dict('records')
+        print(df1)
         return [x for x in df1 if x['Test_Case_ID'] == tc][0]
 
     # Creating Global Object

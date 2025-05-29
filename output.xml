@@ -1,129 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2025-05-29T10:48:58.129768" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.9.5 on win32)" generated="2025-05-29T10:53:09.414047" rpa="false" schemaversion="5">
 <suite id="s1" name="Learn Project" source="C:\Users\fpris\PycharmProjects\Learn Project">
 <suite id="s1-s1" name="Test Cases" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases">
 <suite id="s1-s1-s1" name="Login" source="C:\Users\fpris\PycharmProjects\Learn Project\Test Cases\Login.robot">
 <kw name="Run Keywords" owner="BuiltIn" type="SETUP">
 <kw name="Capture Screenshot Directory" owner="Pre_Req">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2025-05-29T10:48:58.778501" level="INFO">${Current_Date} = 2025-05-29</msg>
+<msg time="2025-05-29T10:53:10.094805" level="INFO">${Current_Date} = 2025-05-29</msg>
 <var>${Current_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.778501" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:10.094805" elapsed="0.000000"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2025-05-29T10:48:58.778501" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Snaps"&gt;C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Snaps&lt;/a&gt;' already exists.</msg>
+<msg time="2025-05-29T10:53:10.094805" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Snaps"&gt;C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Snaps&lt;/a&gt;' already exists.</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Snaps</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.778501" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:10.094805" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>${Screenshot_Dir}/${Current_Date}/Temp</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.778501" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:10.094805" elapsed="0.001115"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:48:58.778501" elapsed="0.001261"/>
+<status status="PASS" start="2025-05-29T10:53:10.094805" elapsed="0.001115"/>
 </kw>
 <arg>Capture Screenshot Directory</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.777205" elapsed="0.002557"/>
+<status status="PASS" start="2025-05-29T10:53:10.093527" elapsed="0.002393"/>
 </kw>
 <test id="s1-s1-s1-t1" name="TC001" line="9">
 <kw name="Run Keywords" owner="BuiltIn" type="SETUP">
 <kw name="Read Test Data - Using Pandas" owner="Pre_Req">
 <kw name="Read Excel Data" owner="Read_Data">
-<msg time="2025-05-29T10:48:58.793337" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<msg time="2025-05-29T10:53:10.114269" level="INFO">Test_Case_ID            Test_Name Login_Id Password
+0        TC001     Login Successful      Sal   apr123
+1        TC002               Bad Id     ytgy   apr123
+2        TC003         Bad Password      Sal      670
+3        TC004  Bad Id and Password      Sao     6ty7
+[{'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}, {'Test_Case_ID': 'TC002', 'Test_Name': 'Bad Id', 'Login_Id': 'ytgy', 'Password': 'apr123'}, {'Test_Case_ID': 'TC003', 'Test_Name': 'Bad Password', 'Login_Id': 'Sal', 'Password': 670}, {'Test_Case_ID': 'TC004', 'Test_Name': 'Bad Id and Password', 'Login_Id': 'Sao', 'Password': '6ty7'}]</msg>
+<msg time="2025-05-29T10:53:10.114269" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
 <var>${data}</var>
 <arg>${EXECDIR}/Test Data 1.xls</arg>
 <arg>TestData</arg>
 <arg>${TEST_NAME}</arg>
-<status status="PASS" start="2025-05-29T10:48:58.779762" elapsed="0.013575"/>
+<status status="PASS" start="2025-05-29T10:53:10.095920" elapsed="0.018349"/>
 </kw>
 <kw name="Log Many" owner="BuiltIn">
-<msg time="2025-05-29T10:48:58.793337" level="INFO">{'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<msg time="2025-05-29T10:53:10.115404" level="INFO">{'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
 <arg>${data}</arg>
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.793337" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:10.115404" elapsed="0.000000"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-05-29T10:48:58.793337" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
+<msg time="2025-05-29T10:53:10.115404" level="INFO">${data} = {'Test_Case_ID': 'TC001', 'Test_Name': 'Login Successful', 'Login_Id': 'Sal', 'Password': 'apr123'}</msg>
 <arg>${data}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.793337" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:10.115404" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:48:58.779762" elapsed="0.014679"/>
+<status status="PASS" start="2025-05-29T10:53:10.095920" elapsed="0.019484"/>
 </kw>
 <arg>Read Test Data - Using Pandas</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.779762" elapsed="0.014679"/>
+<status status="PASS" start="2025-05-29T10:53:10.095920" elapsed="0.019484"/>
 </kw>
 <kw name="Open the Browser" owner="Login_Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:48:58.794441" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-05-29T10:53:10.116437" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-29T10:48:58.794441" elapsed="3.179754"/>
+<status status="PASS" start="2025-05-29T10:53:10.116437" elapsed="2.426575"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-29T10:49:01.974195" elapsed="0.030736"/>
+<status status="PASS" start="2025-05-29T10:53:12.543012" elapsed="0.067842"/>
 </kw>
 <kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:02.195787" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_1.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T10:53:12.867438" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_1.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.005927" elapsed="0.189860"/>
+<status status="PASS" start="2025-05-29T10:53:12.612847" elapsed="0.254591"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:02.005927" elapsed="0.189860"/>
+<status status="PASS" start="2025-05-29T10:53:12.611852" elapsed="0.256586"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:48:58.794441" elapsed="3.401346"/>
+<status status="PASS" start="2025-05-29T10:53:10.116437" elapsed="2.752001"/>
 </kw>
 <kw name="Navigate to Login Link" owner="Login_Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:02.197964" level="INFO">Clicking element 'link:Signup / Login'.</msg>
+<msg time="2025-05-29T10:53:12.869941" level="INFO">Clicking element 'link:Signup / Login'.</msg>
 <arg>${Log_In}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.196882" elapsed="0.568050"/>
+<status status="PASS" start="2025-05-29T10:53:12.869941" elapsed="0.568674"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${Login_Id}</arg>
 <arg>timeout=10</arg>
 <arg>error= Element Not Found</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.764932" elapsed="0.015988"/>
+<status status="PASS" start="2025-05-29T10:53:13.439650" elapsed="0.012420"/>
 </kw>
 <kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:02.920548" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_2.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T10:53:13.594957" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_2.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.781950" elapsed="0.138598"/>
+<status status="PASS" start="2025-05-29T10:53:13.452070" elapsed="0.142887"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:02.780920" elapsed="0.139628"/>
+<status status="PASS" start="2025-05-29T10:53:13.452070" elapsed="0.142887"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:02.196882" elapsed="0.723666"/>
+<status status="PASS" start="2025-05-29T10:53:12.868940" elapsed="0.726017"/>
 </kw>
 <kw name="Enter Login" owner="Login_Page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:02.923102" level="INFO">Typing text 'Sal' into text field 'name:email'.</msg>
+<msg time="2025-05-29T10:53:13.595970" level="INFO">Typing text 'Sal' into text field 'name:email'.</msg>
 <arg>${Login_Id}</arg>
 <arg>${data}[Login_Id]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.921984" elapsed="0.063862"/>
+<status status="PASS" start="2025-05-29T10:53:13.595970" elapsed="0.089748"/>
 </kw>
 <kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:03.125290" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_3.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T10:53:13.804044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_3.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_3.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-05-29T10:49:02.986870" elapsed="0.138420"/>
+<status status="PASS" start="2025-05-29T10:53:13.685718" elapsed="0.118326"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:02.986870" elapsed="0.138420"/>
+<status status="PASS" start="2025-05-29T10:53:13.685718" elapsed="0.119362"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:02.921984" elapsed="0.203306"/>
+<status status="PASS" start="2025-05-29T10:53:13.595970" elapsed="0.209110"/>
 </kw>
 <kw name="Enter Password" owner="Login_Page">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
@@ -131,158 +137,158 @@
 <arg>timeout=5</arg>
 <arg>error= Element Not Found</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.126479" elapsed="0.009298"/>
+<status status="PASS" start="2025-05-29T10:53:13.805080" elapsed="0.009917"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:03.135777" level="INFO">Typing password into text field 'name:password'.</msg>
-<msg time="2025-05-29T10:49:03.156512" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-05-29T10:53:13.814997" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-05-29T10:53:13.832645" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${Password}</arg>
 <arg>${data}[Password]</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.135777" elapsed="0.057139"/>
+<status status="PASS" start="2025-05-29T10:53:13.814997" elapsed="0.049868"/>
 </kw>
 <kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:03.317359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_4.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T10:53:13.975163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_4.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_4.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.192916" elapsed="0.124443"/>
+<status status="PASS" start="2025-05-29T10:53:13.865899" elapsed="0.109264"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:03.192916" elapsed="0.124443"/>
+<status status="PASS" start="2025-05-29T10:53:13.864865" elapsed="0.110298"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:03.126479" elapsed="0.190880"/>
+<status status="PASS" start="2025-05-29T10:53:13.805080" elapsed="0.170083"/>
 </kw>
 <kw name="Click LOG IN Button" owner="Login_Page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:03.318402" level="INFO">Clicking element 'xpath://button[text()='Login']'.</msg>
+<msg time="2025-05-29T10:53:13.975163" level="INFO">Clicking element 'xpath://button[text()='Login']'.</msg>
 <arg>${button_Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.318402" elapsed="0.108037"/>
+<status status="PASS" start="2025-05-29T10:53:13.975163" elapsed="0.068418"/>
 </kw>
 <kw name="Capture Screenshot" owner="Pre_Req">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-05-29T10:49:03.675797" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_5.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-29T10:53:14.290489" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_5.png"&gt;&lt;img src="Screenshots/2025-05-29/Temp/TC001_Successful%20Login_5.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${TEST_NAME}_${TEST DOCUMENTATION}_{index}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.427448" elapsed="0.248349"/>
+<status status="PASS" start="2025-05-29T10:53:14.043581" elapsed="0.246908"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:03.426439" elapsed="0.249358"/>
+<status status="PASS" start="2025-05-29T10:53:14.043581" elapsed="0.246908"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:03.318402" elapsed="0.357395"/>
+<status status="PASS" start="2025-05-29T10:53:13.975163" elapsed="0.315326"/>
 </kw>
 <kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
 <kw name="Close the Browser" owner="Login_Page">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.676794" elapsed="2.162290"/>
+<status status="PASS" start="2025-05-29T10:53:14.292482" elapsed="2.177823"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:03.676794" elapsed="2.162290"/>
+<status status="PASS" start="2025-05-29T10:53:14.291485" elapsed="2.178820"/>
 </kw>
 <kw name="Compile Screenshots" owner="Pre_Req">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2025-05-29T10:49:05.841515" level="INFO">${Current_Date} = 2025-05-29</msg>
+<msg time="2025-05-29T10:53:16.472951" level="INFO">${Current_Date} = 2025-05-29</msg>
 <var>${Current_Date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-05-29T10:49:05.841515" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-29T10:53:16.471653" elapsed="0.001298"/>
 </kw>
 <kw name="List Files In Directory" owner="OperatingSystem">
-<msg time="2025-05-29T10:49:05.842817" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp"&gt;C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp&lt;/a&gt;'.</msg>
-<msg time="2025-05-29T10:49:05.843997" level="INFO">5 files:
+<msg time="2025-05-29T10:53:16.472951" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp"&gt;C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp&lt;/a&gt;'.</msg>
+<msg time="2025-05-29T10:53:16.474113" level="INFO">5 files:
 TC001_Successful Login_1.png
 TC001_Successful Login_2.png
 TC001_Successful Login_3.png
 TC001_Successful Login_4.png
 TC001_Successful Login_5.png</msg>
-<msg time="2025-05-29T10:49:05.843997" level="INFO">@{FileName} = [ TC001_Successful Login_1.png | TC001_Successful Login_2.png | TC001_Successful Login_3.png | TC001_Successful Login_4.png | TC001_Successful Login_5.png ]</msg>
+<msg time="2025-05-29T10:53:16.474113" level="INFO">@{FileName} = [ TC001_Successful Login_1.png | TC001_Successful Login_2.png | TC001_Successful Login_3.png | TC001_Successful Login_4.png | TC001_Successful Login_5.png ]</msg>
 <var>@{FileName}</var>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp</arg>
 <doc>Wrapper for `List Directory` that returns only files.</doc>
-<status status="PASS" start="2025-05-29T10:49:05.841515" elapsed="0.002482"/>
+<status status="PASS" start="2025-05-29T10:53:16.472951" elapsed="0.002327"/>
 </kw>
 <kw name="Create Doc" owner="Read_Data">
-<status status="PASS" start="2025-05-29T10:49:05.843997" elapsed="0.007892"/>
+<status status="PASS" start="2025-05-29T10:53:16.475278" elapsed="0.012637"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Send Snaps To Word" owner="Read_Data">
-<msg time="2025-05-29T10:49:05.860990" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_1.png</msg>
+<msg time="2025-05-29T10:53:16.496774" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_1.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp/${x}</arg>
-<status status="PASS" start="2025-05-29T10:49:05.851889" elapsed="0.009101"/>
+<status status="PASS" start="2025-05-29T10:53:16.489034" elapsed="0.007740"/>
 </kw>
 <var name="${x}">TC001_Successful Login_1.png</var>
-<status status="PASS" start="2025-05-29T10:49:05.851889" elapsed="0.009101"/>
+<status status="PASS" start="2025-05-29T10:53:16.489034" elapsed="0.007740"/>
 </iter>
 <iter>
 <kw name="Send Snaps To Word" owner="Read_Data">
-<msg time="2025-05-29T10:49:05.868801" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_2.png</msg>
+<msg time="2025-05-29T10:53:16.505150" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_2.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp/${x}</arg>
-<status status="PASS" start="2025-05-29T10:49:05.862121" elapsed="0.006680"/>
+<status status="PASS" start="2025-05-29T10:53:16.496774" elapsed="0.008376"/>
 </kw>
 <var name="${x}">TC001_Successful Login_2.png</var>
-<status status="PASS" start="2025-05-29T10:49:05.862121" elapsed="0.006680"/>
+<status status="PASS" start="2025-05-29T10:53:16.496774" elapsed="0.008376"/>
 </iter>
 <iter>
 <kw name="Send Snaps To Word" owner="Read_Data">
-<msg time="2025-05-29T10:49:05.877025" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_3.png</msg>
+<msg time="2025-05-29T10:53:16.511763" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_3.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp/${x}</arg>
-<status status="PASS" start="2025-05-29T10:49:05.868801" elapsed="0.008224"/>
+<status status="PASS" start="2025-05-29T10:53:16.505150" elapsed="0.006613"/>
 </kw>
 <var name="${x}">TC001_Successful Login_3.png</var>
-<status status="PASS" start="2025-05-29T10:49:05.868801" elapsed="0.008224"/>
+<status status="PASS" start="2025-05-29T10:53:16.505150" elapsed="0.006613"/>
 </iter>
 <iter>
 <kw name="Send Snaps To Word" owner="Read_Data">
-<msg time="2025-05-29T10:49:05.883856" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_4.png</msg>
+<msg time="2025-05-29T10:53:16.518597" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_4.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp/${x}</arg>
-<status status="PASS" start="2025-05-29T10:49:05.877025" elapsed="0.006831"/>
+<status status="PASS" start="2025-05-29T10:53:16.511763" elapsed="0.008079"/>
 </kw>
 <var name="${x}">TC001_Successful Login_4.png</var>
-<status status="PASS" start="2025-05-29T10:49:05.877025" elapsed="0.006831"/>
+<status status="PASS" start="2025-05-29T10:53:16.511763" elapsed="0.008079"/>
 </iter>
 <iter>
 <kw name="Send Snaps To Word" owner="Read_Data">
-<msg time="2025-05-29T10:49:05.890719" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_5.png</msg>
+<msg time="2025-05-29T10:53:16.526477" level="INFO">C:\Users\fpris\PycharmProjects\Learn Project/Screenshots/2025-05-29/Temp/TC001_Successful Login_5.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp/${x}</arg>
-<status status="PASS" start="2025-05-29T10:49:05.883856" elapsed="0.006863"/>
+<status status="PASS" start="2025-05-29T10:53:16.519842" elapsed="0.006635"/>
 </kw>
 <var name="${x}">TC001_Successful Login_5.png</var>
-<status status="PASS" start="2025-05-29T10:49:05.883856" elapsed="0.006863"/>
+<status status="PASS" start="2025-05-29T10:53:16.519842" elapsed="0.006635"/>
 </iter>
 <var>${x}</var>
 <value>@{FileName}</value>
-<status status="PASS" start="2025-05-29T10:49:05.851889" elapsed="0.038830"/>
+<status status="PASS" start="2025-05-29T10:53:16.487915" elapsed="0.038562"/>
 </for>
 <kw name="Save Doc" owner="Read_Data">
 <arg>${Screenshot_Dir}/${Current_Date}/Snaps/${TEST_NAME}_${TEST DOCUMENTATION}.docx</arg>
-<status status="PASS" start="2025-05-29T10:49:05.891882" elapsed="0.030231"/>
+<status status="PASS" start="2025-05-29T10:53:16.526477" elapsed="0.036298"/>
 </kw>
 <kw name="Empty Directory" owner="RPA.FileSystem">
-<msg time="2025-05-29T10:49:05.922113" level="WARN">Keyword 'Empty Directory' found both from a custom library 'RPA.FileSystem' and a standard library 'OperatingSystem'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'RPA.FileSystem.Empty Directory' or 'OperatingSystem.Empty Directory'.</msg>
-<msg time="2025-05-29T10:49:05.925665" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_1.png</msg>
-<msg time="2025-05-29T10:49:05.925665" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_2.png</msg>
-<msg time="2025-05-29T10:49:05.925665" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_3.png</msg>
-<msg time="2025-05-29T10:49:05.925665" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_4.png</msg>
-<msg time="2025-05-29T10:49:05.926750" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_5.png</msg>
+<msg time="2025-05-29T10:53:16.563810" level="WARN">Keyword 'Empty Directory' found both from a custom library 'RPA.FileSystem' and a standard library 'OperatingSystem'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'RPA.FileSystem.Empty Directory' or 'OperatingSystem.Empty Directory'.</msg>
+<msg time="2025-05-29T10:53:16.567112" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_1.png</msg>
+<msg time="2025-05-29T10:53:16.567112" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_2.png</msg>
+<msg time="2025-05-29T10:53:16.567112" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_3.png</msg>
+<msg time="2025-05-29T10:53:16.567112" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_4.png</msg>
+<msg time="2025-05-29T10:53:16.568147" level="INFO">Removed file: C:\Users\fpris\PycharmProjects\Learn Project\Screenshots\2025-05-29\Temp\TC001_Successful Login_5.png</msg>
 <arg>${Screenshot_Dir}/${Current_Date}/Temp</arg>
 <doc>Removes all the files in the given directory.</doc>
-<status status="PASS" start="2025-05-29T10:49:05.922113" elapsed="0.004637"/>
+<status status="PASS" start="2025-05-29T10:53:16.563810" elapsed="0.004337"/>
 </kw>
-<status status="PASS" start="2025-05-29T10:49:05.840331" elapsed="0.086419"/>
+<status status="PASS" start="2025-05-29T10:53:16.471653" elapsed="0.096494"/>
 </kw>
 <arg>Close the Browser</arg>
 <arg>Compile Screenshots</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2025-05-29T10:49:03.676794" elapsed="2.249956"/>
+<status status="PASS" start="2025-05-29T10:53:14.291485" elapsed="2.276662"/>
 </kw>
 <doc>Successful Login</doc>
-<status status="PASS" start="2025-05-29T10:48:58.779762" elapsed="7.146988"/>
+<status status="PASS" start="2025-05-29T10:53:10.095920" elapsed="6.472227"/>
 </test>
-<status status="PASS" start="2025-05-29T10:48:58.154768" elapsed="7.773019"/>
+<status status="PASS" start="2025-05-29T10:53:09.434774" elapsed="7.135438"/>
 </suite>
-<status status="PASS" start="2025-05-29T10:48:58.153628" elapsed="7.775360"/>
+<status status="PASS" start="2025-05-29T10:53:09.433625" elapsed="7.137608"/>
 </suite>
-<status status="PASS" start="2025-05-29T10:48:58.131894" elapsed="7.799237"/>
+<status status="PASS" start="2025-05-29T10:53:09.415093" elapsed="7.156140"/>
 </suite>
 <statistics>
 <total>
@@ -297,6 +303,6 @@ TC001_Successful Login_5.png</msg>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-29T10:49:05.922113" level="WARN">Keyword 'Empty Directory' found both from a custom library 'RPA.FileSystem' and a standard library 'OperatingSystem'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'RPA.FileSystem.Empty Directory' or 'OperatingSystem.Empty Directory'.</msg>
+<msg time="2025-05-29T10:53:16.563810" level="WARN">Keyword 'Empty Directory' found both from a custom library 'RPA.FileSystem' and a standard library 'OperatingSystem'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'RPA.FileSystem.Empty Directory' or 'OperatingSystem.Empty Directory'.</msg>
 </errors>
 </robot>
